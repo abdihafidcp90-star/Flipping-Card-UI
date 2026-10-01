@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+ 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+}
+.Flipping-Card{
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #121321;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+.Flipping-Card::before{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(-150px, -100px);
+    background: linear-gradient(90deg, #eb001b, #f79e1b);
+}
+.Flipping-Card::after{
+    content: "";
+    position: absolute;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    transform: translate(150px, 100px);
+    background: linear-gradient(90deg,  #ed5b00, #f79e1b);
+}
+
+.container{
+    position: relative;
+    height: 225px;
+    width: 375px;
+    z-index: 100;
+}
+.container .front-Face{
+    height: 100%;
+    width: 100%;
+    padding: 25px;
+    border-radius: 25px;
+    backdrop-filter: blur(25px);
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  
+}
+.front-Face .header,
+.front-Face .logo {
+    display: flex;
+    align-items: center;
+}
+.front-Face .header{
+    justify-content: space-between;
+}
+.front-Face .logo img{
+    width: 55px;
+    margin-right: 10px;
+
+}
+h5{
+    font-size:16px;
+    font-weight: 400;
+}
+.front-Face .chip{
+    width: 80px;
+}
+.front-Face .card-details{
+    margin-top: 30px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+h6{
+    font-size: 12px;
+    font-weight: 400;
+}
+h5.number{
+    font-size: 18px;
+    letter-spacing: 2px;
+}
+h5.name{
+    margin-top: 20px;
+}
